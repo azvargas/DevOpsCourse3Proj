@@ -12,7 +12,7 @@ variables:
   azureServiceConnectionId: 'Azure Udacity'
   webAppName: 'azvargaspred'
   projectRoot: '$(System.DefaultWorkingDirectory)/flask-sklearn'
-  environmentName: 'web_app_predictions'
+  environmentName: 'Development'
 
 stages:
 - stage: Build
