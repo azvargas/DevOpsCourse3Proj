@@ -11,13 +11,14 @@ The spreadsheet with the planning is included in the GitHub repo
 
 ## Instructions
 
-* Architectural Diagram (Shows how key parts of the system work)
+### Architectural Diagram (Shows how key parts of the system work)
 - Code is commited to GitHub
 - GitHub Actions executes all the actions associated to the repository
 - Azure Pipelines verify if the branch triggers a pipeline.
 - If yes, the pipelines is executed.
 - The pipeline build the application and deploy to an Azure Web App.
 
+### Running the application
 1. Open an Azure Cloud Shell window
 2. Clone the project from GitHub with the following command:
    git clone https://github.com/azvargas/DevOpsCourse3Proj.git
@@ -33,33 +34,34 @@ The spreadsheet with the planning is included in the GitHub repo
    export FLASK_APP='app.py'
    flask run
 
-* Project running on Azure App Service
+### Project running on Azure App Service
 
-* Project cloned into Azure Cloud Shell
+### Project cloned into Azure Cloud Shell
 ![https://github.com/azvargas/DevOpsCourse3Proj/screenshots/master/CI_project_cloned.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_project_cloned.png?raw=true)
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+### Passing tests that are displayed after running the `make all` command from the `Makefile`
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png)
 
-* Output of a test run
+### Output of a test run
 Got an "Unauthorized" error
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+### Successful deploy of the project in Azure Pipelines.  
+[Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png)
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+### Running Azure App Service from Azure Pipelines automatic deployment
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_Azure_Web_App.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_Azure_Web_App.png)
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.
+### Successful prediction from deployed flask app in Azure Cloud Shell.
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_prediction_successful.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_prediction_successful.png)
 
-* Output of streamed log files from deployed application
+### Output of streamed log files from deployed application
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_App_Logs.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_App_Logs.png)
 
-* Output of Github Actions:
+### Output of Github Actions:
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Actions_test.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Actions_test.png)
 
-* README with actions badge:
+### README with actions badge:
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Readme_badge.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Readme_badge.png)
 
 
