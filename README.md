@@ -46,7 +46,6 @@ The spreadsheet with the planning is included in the GitHub repo
 Got an "Unauthorized" error
 
 ### Successful deploy of the project in Azure Pipelines.  
-[Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png)
 
 ### Running Azure App Service from Azure Pipelines automatic deployment
