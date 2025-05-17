@@ -1,18 +1,76 @@
-# Building a CI/CD pipeline
+# Overview
 
+The prediction API intends to generate accurate predictions of the price of houses in a certain area.
 
-## Continuous Integration
+## Project Plan
 
-Project cloned into Azure Cloud Shell:
+Trello board:
+https://trello.com/b/SBkJNFf2/azure-devops-course-3
+
+The spreadsheet with the planning is included in the GitHub repo
+
+## Instructions
+
+* Architectural Diagram (Shows how key parts of the system work)
+- Code is commited to GitHub
+- GitHub Actions executes all the actions associated to the repository
+- Azure Pipelines verify if the branch triggers a pipeline.
+- If yes, the pipelines is executed.
+- The pipeline build the application and deploy to an Azure Web App.
+
+1. Open an Azure Cloud Shell window
+2. Clone the project from GitHub with the following command:
+   git clone https://github.com/azvargas/DevOpsCourse3Proj.git
+3. Enter to the flask-sklearn folder:
+   cd flask-sklearn
+4. Create a Python virtual environment with the following command:
+   python3 -m venv .venv
+5. Activate the virtual environment:
+   source .venv/bin/activate
+6. Execute the make command. This will install the dependencies and run the tests for the project:
+   make all
+7. Type the following commans tu run the application:
+   export FLASK_APP='app.py'
+   flask run
+
+* Project running on Azure App Service
+
+* Project cloned into Azure Cloud Shell
 ![https://github.com/azvargas/DevOpsCourse3Proj/screenshots/master/CI_project_cloned.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_project_cloned.png?raw=true)
 
-Makefile results:
+* Passing tests that are displayed after running the `make all` command from the `Makefile`
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png)
 
-Output of Github Actions:
+* Output of a test run
+Got an "Unauthorized" error
+
+* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png)
+
+* Running Azure App Service from Azure Pipelines automatic deployment
+![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_Azure_Web_App.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_Azure_Web_App.png)
+
+* Successful prediction from deployed flask app in Azure Cloud Shell.
+![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_prediction_successful.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_prediction_successful.png)
+
+* Output of streamed log files from deployed application
+![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_App_Logs.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_App_Logs.png)
+
+* Output of Github Actions:
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Actions_test.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Actions_test.png)
 
-README with actions badge:
+* README with actions badge:
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Readme_badge.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_Readme_badge.png)
 
+
+## Enhancements
+
+Currently the app does not has a frontend. Future plans for enhancements include to add a user interface to interact with the API.
+
+## Demo 
+
+<TODO: Add link Screencast on YouTube>
+
 [![Python application test with Github Actions](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml)
+
+[![Build Status](https://dev.azure.com/factroniccloud/DevOpsCourse3/_apis/build/status%2Fazvargas.DevOpsCourse3Proj?branchName=main)](https://dev.azure.com/factroniccloud/DevOpsCourse3/_build/latest?definitionId=1&branchName=main)
