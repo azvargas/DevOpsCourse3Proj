@@ -34,8 +34,6 @@ The spreadsheet with the planning is included in the GitHub repo
    export FLASK_APP='app.py'
    flask run
 
-### Project running on Azure App Service
-
 ### Project cloned into Azure Cloud Shell
 ![https://github.com/azvargas/DevOpsCourse3Proj/screenshots/master/CI_project_cloned.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_project_cloned.png?raw=true)
 
@@ -69,8 +67,7 @@ Got an "Unauthorized" error
 Currently the app does not has a frontend. Future plans for enhancements include to add a user interface to interact with the API.
 
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
+https://youtu.be/uwkqqcQ_yj8
 
 [![Python application test with Github Actions](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml)
 
