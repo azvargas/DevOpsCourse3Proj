@@ -5,15 +5,37 @@
 
 trigger:
 - main
+- build
 
-pool:
-  name: Default
+pool: Default
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+variables:
+  azureServiceConnectionId: 'Azure Udacity'
+  webAppName: ''
+  projectRoot: '$(System.DefaultWorkingDirectory)/flask-sklearn'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: BuildJob
+    pool: Default
+    steps:
+    - script: |
+        python3 -m pip install -r requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: 'Step - Install requirements.txt'
+   
+    - task: ArchiveFiles@2
+      displayName: 'Step - Archive files'
+      inputs:
+        rootFolderOrFile: '$(projectRoot)'
+        includeRootFolder: true
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
+        verbose: true
+    
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'Step - Upload package'
+      artifact: drop
