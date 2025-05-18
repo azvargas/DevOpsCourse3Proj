@@ -41,7 +41,7 @@ The spreadsheet with the planning is included in the GitHub repo
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CI_make_all.png)
 
 ### Output of a test run
-Got an "Unauthorized" error
+![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/Output_test_run.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/Output_test_run.png)
 
 ### Successful deploy of the project in Azure Pipelines.  
 ![https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/CD_pipeline_completed.png)
@@ -67,7 +67,7 @@ Got an "Unauthorized" error
 Currently the app does not has a frontend. Future plans for enhancements include to add a user interface to interact with the API.
 
 ## Demo 
-https://youtu.be/uwkqqcQ_yj8
+https://youtu.be/okc_4LRDhKc
 
 [![Python application test with Github Actions](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/azvargas/DevOpsCourse3Proj/actions/workflows/pythonapp.yml)
 
