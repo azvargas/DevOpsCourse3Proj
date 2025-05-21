@@ -7,7 +7,7 @@ The prediction API intends to generate accurate predictions of the price of hous
 Trello board:
 https://trello.com/b/SBkJNFf2/azure-devops-course-3
 
-The spreadsheet with the planning is included in the GitHub repo
+The spreadsheet with the planning is included in the GitHub repo (the steps for each sprint were made with the help of Copilot).
 
 ## Instructions
 
