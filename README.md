@@ -12,11 +12,7 @@ The spreadsheet with the planning is included in the GitHub repo
 ## Instructions
 
 ### Architectural Diagram (Shows how key parts of the system work)
-- Code is commited to GitHub
-- GitHub Actions executes all the actions associated to the repository
-- Azure Pipelines verify if the branch triggers a pipeline.
-- If yes, the pipelines is executed.
-- The pipeline build the application and deploy to an Azure Web App.
+![https://github.com/azvargas/DevOpsCourse3Proj/screenshots/master/Architectural_diagram.drawio.png](https://github.com/azvargas/DevOpsCourse3Proj/blob/main/screenshots/Architectural_diagram.drawio.png?raw=true)
 
 ### Running the application
 1. Open an Azure Cloud Shell window
